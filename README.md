@@ -27,7 +27,7 @@
 
 **Manuscript:** Computational Characterization of a Novel Genomically Intact Prophage Mobilome and Genomic Profiling of Virulence and Resistance Hotspots in the Extraintestinal Pathogenic *Escherichia coli* ST354 Lineage
 
-**Journal:** *FEMS Microbiology Letters*
+**Journal:** ----
 
 **Authors:** Sarra Benmoumou-Hosni, Atika Meklat, Ikram Haleche
 
@@ -548,7 +548,7 @@ If you use this pipeline or data in your research, please cite:
                and Genomic Profiling of Virulence and Resistance Hotspots in the
                Extraintestinal Pathogenic {Escherichia coli} ST354 Lineage},
   author    = {Benmoumou-Hosni, Sarra and Meklat, Atika and Haleche, Ikram},
-  journal   = {FEMS Microbiology Letters},
+  journal   = {----},
   year      = {2026},
   doi       = {TBD},
   url       = {https://github.com/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion}
