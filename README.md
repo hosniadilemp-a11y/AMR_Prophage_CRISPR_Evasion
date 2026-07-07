@@ -10,7 +10,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion)](https://github.com/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion/issues)
 [![GitHub stars](https://img.shields.io/github/stars/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion?style=social)](https://github.com/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion/stargazers)
 
-![Zenodo](https://img.shields.io/badge/Zenodo-Archive-blue)
+![Zenodo](https://img.shields.io/badge/Zenodo-DOI%20Pending-lightgrey)
 
 ![Organism](https://img.shields.io/badge/Organism-Escherichia%20coli-blue)
 ![Research](https://img.shields.io/badge/Research-Antimicrobial%20Resistance-red)
@@ -27,8 +27,6 @@
 
 **Manuscript:** Computational Characterization of a Novel Genomically Intact Prophage Mobilome and Genomic Profiling of Virulence and Resistance Hotspots in the Extraintestinal Pathogenic *Escherichia coli* ST354 Lineage
 
-**Journal:** ----
-
 **Authors:** Sarra Benmoumou-Hosni, Atika Meklat, Ikram Haleche
 
 **Isolate:** *Escherichia coli* QA5221 (Sequence Type ST354, ExPEC)
@@ -36,8 +34,8 @@
 **Raw Sequencing Reads:** NCBI SRA accession **SRR39314025** ![NCBI](https://img.shields.io/badge/NCBI-SRR39314025-blue)
  (BioProject: **PRJNA1481519**) ![BioProject](https://img.shields.io/badge/BioProject-PRJNA1481519-green)
 
-[![Paper](https://img.shields.io/badge/Paper-FEMS%20Microbiology%20Letters-blue)]()
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21073430.svg)](https://doi.org/10.5281/zenodo.21073430)
+[![Paper](https://img.shields.io/badge/Paper-Under%20Review-orange)]()
+![DOI](https://img.shields.io/badge/DOI-Pending%20on%20Publication-lightgrey)
 [![Citation](https://img.shields.io/badge/Citation-CFF-blue)](CITATION.cff)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Conda](https://img.shields.io/badge/Conda-Environment-44A833.svg?logo=anaconda&logoColor=white)](environment/environment.yml)
@@ -530,9 +528,9 @@ The interactive clinker synteny visualization is available at `results/clinker/c
 
 5. **ESMFold model:** `esm_if1_gvp4_t16_142M_UR50` (Meta ESM v1, Kaggle-cached). Mean pLDDT of enterohemolysin = 88.4; 85.7% of residues exceed 70-point threshold.
 
-6. **MD trajectories:** Large DCD trajectory files (~6 GB each) are not stored in this repository due to GitHub file size limits. They are archived at:
+6. **MD trajectories:** Large DCD trajectory files (~6 GB each) are not stored in this repository due to GitHub file size limits. They will be archived at:
    - NCBI BioProject `PRJNA1481519` (to be deposited on publication)
-   - Zenodo DOI: `10.5281/zenodo.21073430`
+   - Zenodo (DOI to be assigned on publication)
 
 7. **Locus tag mapping:** The deposited NCBI GenBank accession uses prefix `AC4NUP_XXXXX`. Local Prokka annotation uses prefix `KNGPFPPJ_XXXXX`. A coordinate-matched translation table is provided in `data/` to ensure reproducibility.
 
@@ -548,7 +546,7 @@ If you use this pipeline or data in your research, please cite:
                and Genomic Profiling of Virulence and Resistance Hotspots in the
                Extraintestinal Pathogenic {Escherichia coli} ST354 Lineage},
   author    = {Benmoumou-Hosni, Sarra and Meklat, Atika and Haleche, Ikram},
-  journal   = {----},
+  journal   = {Under Review},
   year      = {2026},
   doi       = {TBD},
   url       = {https://github.com/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion}

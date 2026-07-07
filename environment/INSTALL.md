@@ -1,6 +1,6 @@
 # Installation Instructions
 
-This document provides steps to set up the execution environment for the Paper 2 reproducibility pipeline.
+This document provides steps to set up the execution environment for the AMR Prophage CRISPR Evasion reproducibility pipeline.
 
 ## 1. Conda Environment Setup (Recommended)
 

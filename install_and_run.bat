@@ -1,6 +1,6 @@
 @echo off
 echo =======================================================================
-#          Paper 2 Reproducibility Pipeline Automated Windows Launcher
+#          AMR Prophage CRISPR Evasion — Automated Windows Launcher
 echo =======================================================================
 echo.
 echo Checking for Conda installation...
@@ -19,7 +19,7 @@ call conda env create -f environment/environment.yml -y
 echo Activating environment 'amr_env'...
 call conda activate amr_env
 
-echo Running Paper 2 Reproducibility Pipeline...
+echo Running AMR Prophage CRISPR Evasion Pipeline...
 python scripts/06_generate_paper2_plots.py
 
 echo.

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or data, please cite the associated paper as below."
 type: software
 title: "AMR Prophage CRISPR Evasion — Reproducibility Pipeline for ExPEC ST354 Prophage Mobilome Analysis"
-doi: 10.5281/zenodo.21073430
+doi: "TBD — to be assigned on Zenodo deposit upon publication"
 abstract: >
   An integrated reproducibility pipeline for the computational characterization of a
   genomically intact prophage mobilome and genomic profiling of virulence and resistance
@@ -58,6 +58,6 @@ preferred-citation:
       given-names: Atika
     - family-names: Haleche
       given-names: Ikram
-  journal: "FEMS Microbiology Letters"
+  journal: "(to be added upon acceptance)"
   year: 2026
   doi: "TBD — to be updated on publication"

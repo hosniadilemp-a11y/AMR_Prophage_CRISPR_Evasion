@@ -1,10 +1,10 @@
 #!/bin/bash
 # =============================================================================
-#          Paper 2 Reproducibility Pipeline Execution Orchestrator
+#          AMR Prophage CRISPR Evasion — Pipeline Execution Orchestrator
 # =============================================================================
 set -e
 
-echo "=== [Paper 2 Pipeline Started] ==="
+echo "=== [AMR Prophage CRISPR Evasion Pipeline Started] ==="
 
 # Create standard output directories if they don't exist
 mkdir -p results logs figures data
@@ -39,4 +39,4 @@ python scripts/05_analyze_paper2_mds.py > logs/05_trajectory_analysis.log 2>&1
 echo "[Step 6/6] Generating paper figures..."
 python scripts/06_generate_paper2_plots.py > logs/06_generate_plots.log 2>&1
 
-echo "=== [Paper 2 Pipeline Completed Successfully] ==="
+echo "=== [AMR Prophage CRISPR Evasion Pipeline Completed] ==="

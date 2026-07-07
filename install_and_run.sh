@@ -1,6 +1,6 @@
 #!/bin/bash
 # =======================================================================
-#          Paper 2 Reproducibility Pipeline Automated Linux Launcher
+#          AMR Prophage CRISPR Evasion — Automated Linux Launcher
 # =======================================================================
 set -e
 
@@ -35,7 +35,7 @@ fi
 echo "Activating environment 'amr_env'..."
 conda activate amr_env
 
-echo "Running Paper 2 Reproducibility Pipeline..."
+echo "Running AMR Prophage CRISPR Evasion Pipeline..."
 bash workflows/run_all.sh
 
 echo ""

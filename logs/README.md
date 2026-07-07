@@ -14,4 +14,4 @@ This directory contains execution logs from the pipeline steps.
 | `step5_md_antirepressor.csv` | Step 5 | Antirepressor aqueous MD thermodynamic log |
 
 > **Note:** Large MD trajectory files (.dcd) are not stored here due to GitHub size limits.
-> They are archived at Zenodo: https://doi.org/10.5281/zenodo.21073430
+> They will be archived at Zenodo upon publication (DOI to be assigned).
