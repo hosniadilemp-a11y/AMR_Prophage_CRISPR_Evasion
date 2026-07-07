@@ -8,9 +8,9 @@ from matplotlib.patches import FancyBboxPatch, Polygon, Circle, FancyArrowPatch
 from matplotlib.path import Path
 import matplotlib.patches as patches
 
-# Define base directories
-BASE_DIR = "/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work"
-OUTPUT_DIR = os.path.join(BASE_DIR, "manuscript/paper1/plots/final_figures/manuscript")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_DIR   = os.path.dirname(SCRIPT_DIR)
+OUTPUT_DIR = os.path.join(REPO_DIR, "figures")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Set styling params
@@ -289,9 +289,9 @@ for s in range(1, 9):
 draw_connections(ax)
 
 # Save figure in high-res PNG, vector PDF and SVG
-png_out = os.path.join(OUTPUT_DIR, "Fig01_Discovery_Pipeline_Schema.png")
-pdf_out = os.path.join(OUTPUT_DIR, "Fig01_Discovery_Pipeline_Schema.pdf")
-svg_out = os.path.join(OUTPUT_DIR, "Fig01_Discovery_Pipeline_Schema.svg")
+png_out = os.path.join(OUTPUT_DIR, "step0_pipeline_schema.png")
+pdf_out = os.path.join(OUTPUT_DIR, "step0_pipeline_schema.pdf")
+svg_out = os.path.join(OUTPUT_DIR, "step0_pipeline_schema.svg")
 
 plt.savefig(png_out, dpi=300, bbox_inches='tight', facecolor='white')
 plt.savefig(pdf_out, bbox_inches='tight', facecolor='white')

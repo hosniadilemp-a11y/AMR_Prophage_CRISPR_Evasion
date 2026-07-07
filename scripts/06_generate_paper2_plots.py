@@ -143,8 +143,8 @@ def plot_figure1_assembly_coverage(df_contigs, out_dir):
     ax.spines['bottom'].set_color('#cbd5e1')
     
     plt.tight_layout()
-    fig.savefig(os.path.join(out_dir, "figure1_assembly_coverage.png"), bbox_inches="tight")
-    fig.savefig(os.path.join(out_dir, "figure1_assembly_coverage.pdf"), bbox_inches="tight")
+    fig.savefig(os.path.join(out_dir, "step1_assembly_coverage.png"), bbox_inches="tight")
+    fig.savefig(os.path.join(out_dir, "step1_assembly_coverage.pdf"), bbox_inches="tight")
     plt.close(fig)
 
 def plot_figure2_pangenome_partition(summary_path, out_dir):
@@ -822,58 +822,45 @@ def perform_statistical_plots(faa_path, ffn_path, roary_path, out_dir):
         ax.set_title(drawing["name"], fontsize=11, weight="bold", loc="left", color="#1e293b", pad=8)
         ax.axis("off")
         
-    fig.savefig(os.path.join(out_dir, "figure7_amr_genetic_context.png"), bbox_inches="tight")
-    fig.savefig(os.path.join(out_dir, "figure7_amr_genetic_context.pdf"), bbox_inches="tight")
+    fig.savefig(os.path.join(out_dir, "step3_amr_genetic_context.png"), bbox_inches="tight")
+    fig.savefig(os.path.join(out_dir, "step3_amr_genetic_context.pdf"), bbox_inches="tight")
     plt.close(fig)
-    print("Saved Figure 7.")
+    print("Saved step3_amr_genetic_context.")
 
 # ==============================================================================
 # MAIN PIPELINE RUNNER
 # ==============================================================================
 def main():
     print("======================================================================")
-    print("REGENERATING PAPER 2 FIGURES - DISTINCT STYLE SYSTEM")
+    print("REGENERATING REPRODUCIBILITY FIGURES FOR PROPHAGE MOBILOME REPO")
     print("======================================================================")
     
-    fasta_path = "/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/results/Step2_Assembly/spades_output/contigs.fasta"
-    summary_path = "/media/adel/Data/Hosni/openmm_windows_setup/pangenome_expansion_highcpu/panaroo_out/summary_statistics.txt"
-    tree_path = "/media/adel/Data/Hosni/openmm_windows_setup/pangenome_expansion_highcpu/panaroo_out/core_phylogeny.tree"
-    faa_path = "/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/results/Step3_Annotation/prokka_out/Ecoli_isolate.faa"
-    ffn_path = "/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/results/Step3_Annotation/prokka_out/Ecoli_isolate.ffn"
-    roary_path = "/media/adel/Data/Hosni/openmm_windows_setup/pangenome_expansion_highcpu/panaroo_out/gene_presence_absence_roary.csv"
-    
-    # Destination directory is paper 2 plots folder
-    out_dir = "/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/manuscript/paper2/plots"
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    REPO_DIR   = os.path.dirname(SCRIPT_DIR)
+    out_dir    = os.path.join(REPO_DIR, "figures")
     os.makedirs(out_dir, exist_ok=True)
     
-    # Verify input files exist
-    for path in [fasta_path, summary_path, faa_path, ffn_path, roary_path, tree_path]:
-        if not os.path.exists(path):
-            print(f"Error: Required input file '{path}' is missing.")
-            sys.exit(1)
-            
-    print(f"-> Using expanded pangenome tree: {tree_path}")
-
-    # Generate Figure 1
-    df_contigs = parse_assembly_contigs(fasta_path)
-    plot_figure1_assembly_coverage(df_contigs, out_dir)
+    # Try local workspace base directory
+    workspace_dir = "/home/adel/Documents/AMR_Work/AMR_Work"
+    fasta_path = os.path.join(workspace_dir, "results/Step2_Assembly/spades_output/contigs.fasta")
+    faa_path = os.path.join(workspace_dir, "results/Step3_Annotation/prokka_out/Ecoli_isolate.faa")
+    ffn_path = os.path.join(workspace_dir, "results/Step3_Annotation/prokka_out/Ecoli_isolate.ffn")
+    roary_path = os.path.join(workspace_dir, "pangenome_expansion_highcpu/panaroo_out/gene_presence_absence_roary.csv")
     
-    # Generate Figure 2
-    plot_figure2_pangenome_partition(summary_path, out_dir)
-    
-    # Generate Figure 3
-    plot_figure3_phylogeny_tree(tree_path, out_dir)
-    
-    # Generate Figure X
-    plot_figureX_pangenome_curves(roary_path, out_dir)
-    
-    # Generate Figure 4
-    plot_figure4_is_distribution(out_dir)
-    
-    # Generate Figures 5, 6, 7, 8
-    perform_statistical_plots(faa_path, ffn_path, roary_path, out_dir)
-    
-    print("\n✔ All 9 figures successfully generated and saved in the new style for Paper 2!")
+    # Generate Figure 1 (Assembly Coverage)
+    if os.path.exists(fasta_path):
+        df_contigs = parse_assembly_contigs(fasta_path)
+        plot_figure1_assembly_coverage(df_contigs, out_dir)
+    else:
+        print(f"Skipping step1_assembly_coverage: {fasta_path} not found.")
+        
+    # Generate Figure 7 (AMR genetic context)
+    if os.path.exists(faa_path) and os.path.exists(ffn_path) and os.path.exists(roary_path):
+        perform_statistical_plots(faa_path, ffn_path, roary_path, out_dir)
+    else:
+        print("Skipping step3_amr_genetic_context: required annotation files not found.")
+        
+    print("\n✔ Relevant figures successfully generated and saved in the figures/ folder!")
 
 if __name__ == "__main__":
     main()

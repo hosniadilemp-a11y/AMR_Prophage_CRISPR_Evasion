@@ -162,10 +162,10 @@ def main():
     ax1.grid(True, linestyle="--", alpha=0.35)
     
     plt.tight_layout()
-    fig.savefig(os.path.join(PLOT_DIR, "figure10_md_rmsd_rg.png"), dpi=300, bbox_inches="tight")
-    fig.savefig(os.path.join(PLOT_DIR, "figure10_md_rmsd_rg.pdf"), dpi=300, bbox_inches="tight")
+    fig.savefig(os.path.join(PLOT_DIR, "step5_md_rmsd_rg.png"), dpi=300, bbox_inches="tight")
+    fig.savefig(os.path.join(PLOT_DIR, "step5_md_rmsd_rg.pdf"), dpi=300, bbox_inches="tight")
     plt.close(fig)
-    print("  ✓ Figure 10 RMSD/Rg saved.")
+    print("  ✓ step5_md_rmsd_rg saved.")
 
     # ── 4. Plot Figure 10 RMSF ──────────────────────────────────────────────
     print("Plotting Figure 10 RMSF...")
@@ -189,10 +189,10 @@ def main():
     axes[1].grid(True, linestyle="--", alpha=0.35)
     
     plt.tight_layout()
-    fig.savefig(os.path.join(PLOT_DIR, "figure10_md_rmsf.png"), dpi=300, bbox_inches="tight")
-    fig.savefig(os.path.join(PLOT_DIR, "figure10_md_rmsf.pdf"), dpi=300, bbox_inches="tight")
+    fig.savefig(os.path.join(PLOT_DIR, "step5_md_rmsf.png"), dpi=300, bbox_inches="tight")
+    fig.savefig(os.path.join(PLOT_DIR, "step5_md_rmsf.pdf"), dpi=300, bbox_inches="tight")
     plt.close(fig)
-    print("  ✓ Figure 10 RMSF saved.")
+    print("  ✓ step5_md_rmsf saved.")
 
     # ── 5. Update paper2.tex with exact values if it exists ─────────────────
     if os.path.exists(PAPER2_TEX):

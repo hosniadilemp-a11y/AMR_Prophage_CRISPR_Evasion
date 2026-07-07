@@ -14,7 +14,9 @@ import numpy as np
 from pathlib import Path
 import subprocess, sys
 
-OUT_DIR = Path("/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/manuscript/paper2/plots")
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_DIR   = SCRIPT_DIR.parent
+OUT_DIR    = REPO_DIR / "figures"
 
 plt.rcParams.update({
     'font.family': 'DejaVu Sans',
@@ -253,7 +255,7 @@ ax.set_title(
 
 plt.tight_layout()
 for ext in ('pdf', 'png'):
-    fig.savefig(OUT_DIR / f'figure12c_prophage_synteny.{ext}',
+    fig.savefig(OUT_DIR / f'step2_prophage_synteny.{ext}',
                 dpi=300, bbox_inches='tight')
-print("✓ Figure 12c (prophage synteny comparison) saved.")
+print("✓ step2_prophage_synteny saved.")
 plt.close()

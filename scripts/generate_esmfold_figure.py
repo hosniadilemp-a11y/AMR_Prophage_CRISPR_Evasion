@@ -21,8 +21,10 @@ plt.rcParams.update({
     'axes.spines.right': False,
 })
 
-PDB  = Path("/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/results/Step6/esmfold_structures/KNGPFPPJ_00061.pdb")
-OUT  = Path("/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/manuscript/paper2/plots")
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_DIR   = SCRIPT_DIR.parent
+PDB        = REPO_DIR / "results/md_structures/ehly_fixed.pdb"
+OUT        = REPO_DIR / "figures"
 
 # ── Load pLDDT ────────────────────────────────────────────────────────────────
 plddt_raw = []
@@ -142,7 +144,7 @@ plt.suptitle('Structural Validation of Prophage Cargo Gene KNGPFPPJ_00061 (Enter
 
 plt.tight_layout()
 for ext in ('pdf', 'png'):
-    fig.savefig(OUT / f'figure15_esmfold_enterohemolysin.{ext}',
+    fig.savefig(OUT / f'step5_esmfold_enterohemolysin.{ext}',
                 dpi=300, bbox_inches='tight')
-print("✓ Figure 15 (ESMFold + Foldseek enterohemolysin) saved.")
+print("✓ step5_esmfold_enterohemolysin saved.")
 plt.close()

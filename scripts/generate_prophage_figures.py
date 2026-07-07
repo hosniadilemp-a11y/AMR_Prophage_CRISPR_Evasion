@@ -14,8 +14,9 @@ import matplotlib.patheffects as pe
 import numpy as np
 from pathlib import Path
 
-# ── Output directory ────────────────────────────────────────────────────────
-OUT_DIR = Path("/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/manuscript/paper2/plots")
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_DIR   = SCRIPT_DIR.parent
+OUT_DIR    = REPO_DIR / "figures"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── Style ────────────────────────────────────────────────────────────────────
@@ -199,9 +200,9 @@ ax.set_title('Prophage Boundary Map and Functional Module Organisation (NODE_1, 
 
 plt.tight_layout()
 for ext in ('pdf', 'png'):
-    fig.savefig(OUT_DIR / f'figure12a_prophage_module_map.{ext}',
+    fig.savefig(OUT_DIR / f'step1_prophage_module_map.{ext}',
                 dpi=300, bbox_inches='tight')
-print("✓ Figure 12a (prophage module map) saved.")
+print("✓ step1_prophage_module_map saved.")
 plt.close()
 
 
@@ -268,9 +269,9 @@ ax_bar.set_xlim(0, max(counts) + 2.5)
 
 plt.tight_layout()
 for ext in ('pdf', 'png'):
-    fig2.savefig(OUT_DIR / f'figure12b_prophage_functional_composition.{ext}',
+    fig2.savefig(OUT_DIR / f'step2_prophage_composition.{ext}',
                  dpi=300, bbox_inches='tight')
-print("✓ Figure 12b (functional composition) saved.")
+print("✓ step2_prophage_composition saved.")
 plt.close()
 
 print("\nAll prophage figures generated successfully.")

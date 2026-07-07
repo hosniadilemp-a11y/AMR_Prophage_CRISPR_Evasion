@@ -17,7 +17,9 @@ plt.rcParams.update({
     'pdf.fonttype': 42, 'axes.spines.top': False, 'axes.spines.right': False,
 })
 
-OUT = Path("/media/adel/Data/Hosni/openmm_windows_setup/AMR_Work/manuscript/paper2/plots")
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_DIR   = SCRIPT_DIR.parent
+OUT        = REPO_DIR / "figures"
 
 # ── Data ──────────────────────────────────────────────────────────────────────
 # BLASTp top hits (from NCBI remote search)
@@ -168,6 +170,6 @@ fig.text(0.5, 0.01,
          bbox=dict(boxstyle='round,pad=0.4', facecolor='#fff3e0', edgecolor='#e76f51', alpha=0.9))
 
 for ext in ('pdf', 'png'):
-    fig.savefig(OUT / f'figure16_phage_taxonomy.{ext}', dpi=300, bbox_inches='tight')
-print("✓ Figure 16 (phage taxonomy) saved.")
+    fig.savefig(OUT / f'step2_phage_taxonomy.{ext}', dpi=300, bbox_inches='tight')
+print("✓ step2_phage_taxonomy saved.")
 plt.close()
