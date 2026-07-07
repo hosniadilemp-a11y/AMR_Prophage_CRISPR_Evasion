@@ -1,14 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite the associated paper as below."
 type: software
-title: "Paper 2: Active Prophage Mobilome & CRISPR Evasion Analysis — Reproducibility Pipeline"
+title: "AMR Prophage CRISPR Evasion — Reproducibility Pipeline for ExPEC ST354 Prophage Mobilome Analysis"
 doi: 10.5281/zenodo.21073430
 abstract: >
-  An integrated reproducibility pipeline for genomic epidemiology, mobilome dynamics,
-  active prophage characterization, and statistical resistome profiling of E. coli ST354
-  clinical isolate QA5221. Includes sliding-window attL/attR scanning, prophage annotation
-  extraction, clinker synteny comparison, Jaccard AMR gene co-occurrence network analysis,
-  CRISPR immunity profiling, and membrane/aqueous molecular dynamics simulations (OpenMM/MDTraj).
+  An integrated reproducibility pipeline for the computational characterization of a
+  genomically intact prophage mobilome and genomic profiling of virulence and resistance
+  hotspots in the extraintestinal pathogenic Escherichia coli ST354 lineage. Includes
+  sliding-window attL/attR scanning, prophage annotation extraction, comparative synteny
+  analysis (clinker), Jaccard AMR gene co-occurrence network analysis, CRISPR immunity
+  profiling (MinCED + BLASTn), ESMFold structural prediction, Foldseek homolog search,
+  and membrane/aqueous molecular dynamics simulations (OpenMM/MDTraj, 100 ns).
 authors:
   - family-names: Benmoumou-Hosni
     given-names: Sarra
@@ -31,7 +33,7 @@ repository-code: "https://github.com/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasi
 url: "https://github.com/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion"
 license: MIT
 version: "1.0.0"
-date-released: "2026"
+date-released: "2026-07-07"
 keywords:
   - prophage mobilome
   - CRISPR-Cas evasion
@@ -40,11 +42,15 @@ keywords:
   - Escherichia coli
   - ST354
   - ExPEC
+  - antimicrobial resistance
+  - structural bioinformatics
+  - ESMFold
 preferred-citation:
   type: article
   title: >
-    Genomic Epidemiology, Mobilome Dynamics, and Statistical Resistome Characterization
-    of the Extraintestinal Pathogenic Escherichia coli ST354 Lineage
+    Computational Characterization of a Novel Genomically Intact Prophage Mobilome
+    and Genomic Profiling of Virulence and Resistance Hotspots in the
+    Extraintestinal Pathogenic Escherichia coli ST354 Lineage
   authors:
     - family-names: Benmoumou-Hosni
       given-names: Sarra
@@ -52,6 +58,6 @@ preferred-citation:
       given-names: Atika
     - family-names: Haleche
       given-names: Ikram
-  journal: "Gene"
+  journal: "FEMS Microbiology Letters"
   year: 2026
   doi: "TBD — to be updated on publication"
