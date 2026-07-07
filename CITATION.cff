@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the associated paper as below."
+type: software
+title: "Paper 2: Active Prophage Mobilome & CRISPR Evasion Analysis — Reproducibility Pipeline"
+doi: 10.5281/zenodo.21073430
+abstract: >
+  An integrated reproducibility pipeline for genomic epidemiology, mobilome dynamics,
+  active prophage characterization, and statistical resistome profiling of E. coli ST354
+  clinical isolate QA5221. Includes sliding-window attL/attR scanning, prophage annotation
+  extraction, clinker synteny comparison, Jaccard AMR gene co-occurrence network analysis,
+  CRISPR immunity profiling, and membrane/aqueous molecular dynamics simulations (OpenMM/MDTraj).
+authors:
+  - family-names: Benmoumou-Hosni
+    given-names: Sarra
+    email: sarra_ben@outlook.fr
+    affiliation: >
+      Laboratoire de Biologie des Systèmes Microbiens,
+      École Normale Supérieure de Kouba, 16000 Alger, Algeria
+    orcid: ""
+  - family-names: Meklat
+    given-names: Atika
+    affiliation: >
+      Laboratoire de Biologie des Systèmes Microbiens,
+      École Normale Supérieure de Kouba, 16000 Alger, Algeria
+  - family-names: Haleche
+    given-names: Ikram
+    affiliation: >
+      Département de Biologie, Université Saad Dahlab Blida 1,
+      B.P. 270, Route de Soumâa, 09000 Blida, Algeria
+repository-code: "https://github.com/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion"
+url: "https://github.com/hosniadilemp-a11y/AMR_Prophage_CRISPR_Evasion"
+license: MIT
+version: "1.0.0"
+date-released: "2026"
+keywords:
+  - prophage mobilome
+  - CRISPR-Cas evasion
+  - molecular dynamics
+  - Jaccard co-occurrence network
+  - Escherichia coli
+  - ST354
+  - ExPEC
+preferred-citation:
+  type: article
+  title: >
+    Genomic Epidemiology, Mobilome Dynamics, and Statistical Resistome Characterization
+    of the Extraintestinal Pathogenic Escherichia coli ST354 Lineage
+  authors:
+    - family-names: Benmoumou-Hosni
+      given-names: Sarra
+    - family-names: Meklat
+      given-names: Atika
+    - family-names: Haleche
+      given-names: Ikram
+  journal: "Gene"
+  year: 2026
+  doi: "TBD — to be updated on publication"

@@ -1,0 +1,61 @@
+# =============================================================================
+# .gitignore — Paper 2 Active Prophage & CRISPR Evasion Analysis Repository
+# =============================================================================
+
+# Large raw data files (deposit to NCBI SRA / Zenodo instead)
+data/*
+!data/.gitkeep
+
+# Large MD trajectory files (archive to Zenodo)
+*.dcd
+*.chk
+*.xtc
+*.trr
+results/**/*.dcd
+results/**/*.chk
+results/**/*.pdb
+
+# Conda environment caches
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.bak2
+*.pre_revision
+
+# LaTeX compilation artefacts
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.bbl
+*.synctex.gz
+
+# OS-specific
+.DS_Store
+Thumbs.db
+.fuse_hidden*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Large ESMFold model cache (download from HuggingFace)
+esm_models/
+*.pt
+
+# Large database files
+amrfinder_db/
+blast_db/

@@ -1,0 +1,61 @@
+# =============================================================================
+# Pipeline Configuration — Paper 2: Active Prophage & CRISPR Evasion Analysis
+# =============================================================================
+# Customize these parameters to adjust execution of the replication pipeline
+
+# --- Isolate Information ---
+isolate_id: "QA5221"
+species: "Escherichia coli"
+sequence_type: "ST354"
+
+# --- Input Files ---
+assembly_fasta: "data/QA5221.fasta"
+prokka_gff: "data/Ecoli_isolate.gff"
+prokka_gbk: "data/Ecoli_isolate.gbk"
+
+# --- Output Directory ---
+output_dir: "results/"
+
+# --- Step 12: Prophage Characterization ---
+prophage:
+  node: "NODE_1"
+  start_coord: 56422
+  end_coord: 98747
+  attL: "AAAAAAACCGCC"
+  attR: "AAAACAACCGCC"
+  reference_phage_accession: "NC_001799.1" # E. coli bacteriophage DLP12
+  clinker_min_identity: 0.3
+
+# --- CRISPR-Cas System Analysis ---
+crispr:
+  node: "NODE_9"
+  start_coord: 36345
+  end_coord: 37288
+  spacer_count: 15
+  cas_operon_type: "Type I-E"
+  targeting_threshold_bp: 20
+
+# --- Acquired Resistome Analysis ---
+resistome:
+  abricate_databases:
+    - "resfinder"
+    - "card"
+  jaccard_cooccurrence_threshold: 0.70
+
+# --- ESMFold Structural Prediction ---
+structure:
+  target_genes:
+    enterohemolysin: "KNGPFPPJ_00061"
+    antirepressor: "KNGPFPPJ_00084"
+  esmfold_chunk_size: 64
+
+# --- Molecular Dynamics (OpenMM) Simulation ---
+md:
+  membrane_system:
+    protein: "KNGPFPPJ_00061" # Enterohemolysin cytolysin
+    lipid_composition: "POPC:POPG (3:1)"
+    steps: 50000000 # 100 ns
+  aqueous_system:
+    protein: "KNGPFPPJ_00084" # Antirepressor switch
+    solvent: "Water (TIP3P)"
+    steps: 50000000 # 100 ns
