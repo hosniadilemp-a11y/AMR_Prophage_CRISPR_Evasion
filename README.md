@@ -57,7 +57,7 @@
 
 ## Pipeline Schema
 
-![Integrated Computational Workflow for Prophage and AMR Analysis](figures/figure01_discovery_pipeline_schema.png)
+![Integrated Computational Workflow for Prophage and AMR Analysis](figures/step0_pipeline_schema.png)
 
 ---
 
@@ -384,7 +384,7 @@ conda run -n amr_prophage_env python3 scripts/03_run_amr_cooccurrence.py \
 
 **Outputs:**
 - `results/amr_network/jaccard_cooccurrence_matrix.tsv` — Gene-level Jaccard similarity
-- `figures/figure_amr_network.pdf` — Co-occurrence network visualization
+- `figures/step3_virulence_heatmap.pdf` — Virulence profile heatmap visualization
 
 ---
 
@@ -468,16 +468,20 @@ python3 scripts/generate_phage_taxonomy_figure.py --output figures/
 
 | Figure | Title | Generating Script | Data Source |
 |---|---|---|---|
-| Fig. 01 | Discovery pipeline schema | `generate_pipeline_schema.py` | Conceptual |
-| Fig. 12a | Prophage linear module map | `generate_prophage_figures.py` | `results/prophage_annotation/` |
-| Fig. 12b | Prophage functional composition | `generate_prophage_figures.py` | `results/prophage_annotation/` |
-| Fig. 12c | DLP12 comparative synteny (clinker) | `generate_synteny_figure.py` | `results/clinker/` |
-| Fig. 13 | CARD resistance phenotype matrix | `generate_exp5_exp6_figures.py` | `results/crispr_card/` |
-| Fig. 14 | CRISPR array architecture | `generate_prophage_figures.py` | `results/crispr_card/` |
-| Fig. 15 | ESMFold pLDDT + Foldseek homologs | `generate_esmfold_figure.py` | `results/md_structures/` |
-| Fig. 16 | Phage taxonomy (BLASTp + Foldseek) | `generate_phage_taxonomy_figure.py` | NCBI nr + afdb50 |
-| Fig. 17 | Lineage-wide candidate prevalence | `generate_exp5_exp6_figures.py` | `results/candidates/` |
-| Fig. MD | MD RMSD + Rg + RMSF panels | `generate_exp5_exp6_figures.py` | `results/md_*/analysis/` |
+| `step0_pipeline_schema` | Integrated computational genomics workflow | `generate_pipeline_schema.py` | Reference / Schema |
+| `step1_assembly_coverage` | Assembly read coverage & stats | `generate_paper2_plots.py` | `results/step2_assembly/` |
+| `step1_prophage_module_map` | Prophage boundary (attL/attR) and module map | `generate_prophage_figures.py` | `results/prophage_annotation/` |
+| `step2_prophage_composition` | Prophage CDS functional composition | `generate_prophage_figures.py` | `results/prophage_annotation/` |
+| `step2_prophage_synteny` | Synteny map vs. DLP12 reference (clinker) | `generate_synteny_figure.py` | `results/clinker/` |
+| `step2_phage_taxonomy` | Phage taxonomy classification | `generate_phage_taxonomy_figure.py` | BLASTp/Foldseek |
+| `step3_amr_genetic_context` | AMR genetic context (Class 1 integron) | `generate_paper2_plots.py` | `results/step4_mge/` |
+| `step3_virulence_heatmap` | Lineage virulence factor profile | `generate_paper2_plots.py` | `results/virulence/` |
+| `step4_crispr_array` | CRISPR array & spacer naive gaps | `generate_prophage_figures.py` | `results/crispr_card/` |
+| `step4_card_phenotype` | Predicted CARD phenotype matrix | `generate_exp5_exp6_figures.py` | `results/crispr_card/` |
+| `step4_candidate_prevalence` | Carriage frequency of candidates | `generate_exp5_exp6_figures.py` | `results/candidates/` |
+| `step5_esmfold_enterohemolysin` | ESMFold model + Foldseek homologs | `generate_esmfold_figure.py` | `results/md_structures/` |
+| `step5_md_rmsd_rg` | MD simulations backbone RMSD & Rg | `generate_exp5_exp6_figures.py` | `results/md_*/` |
+| `step5_md_rmsf` | MD simulations residue RMSF | `generate_exp5_exp6_figures.py` | `results/md_*/` |
 
 | Table | Title | Source |
 |---|---|---|
