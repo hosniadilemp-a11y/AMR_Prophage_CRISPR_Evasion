@@ -1,0 +1,15 @@
+prokka_locus_tag	ncbi_locus_tag	contig	start_bp	end_bp	strand	function	module	notes
+KNGPFPPJ_00058	AC4NUP_00300	NODE_1	56422	57200	+	hypothetical protein	lysogeny	prophage boundary attL proximal
+KNGPFPPJ_00059	AC4NUP_00305	NODE_1	57201	58100	+	CI repressor / cI-like	lysogeny	transcriptional regulator of lytic switch
+KNGPFPPJ_00060	AC4NUP_00310	NODE_1	58101	58654	-	hypothetical protein	lysogeny	predicted integrase accessory
+KNGPFPPJ_00061	AC4NUP_00305	NODE_1	58655	59707	-	Enterohemolysin cytolysin (HlyE-like)	virulence cargo	Key virulence gene; 350 aa; mean pLDDT=88.4; MD-simulated
+KNGPFPPJ_00084	AC4NUP_00420	NODE_1	68500	69250	+	Antirepressor switch protein	lysogeny regulation	MD-simulated; RMSD 10.6±1.5 Å (full); 2.14±0.32 Å (core)
+KNGPFPPJ_00091	AC4NUP_00460	NODE_1	73234	73845	+	Large terminase subunit (TerL)	DNA packaging	BLASTp: 100% hits E. coli only; Foldseek HK97-like fold
+KNGPFPPJ_00097	AC4NUP_00480	NODE_1	76580	77329	+	Portal protein	DNA packaging	head-tail connector
+KNGPFPPJ_00103	AC4NUP_00510	NODE_1	82544	83485	+	Tail assembly chaperone	tail assembly	gpG/gpGT frameshift product
+KNGPFPPJ_00107	AC4NUP_00530	NODE_1	85591	86100	+	Tail fibre protein	tail assembly	host-range determinant
+KNGPFPPJ_00109	AC4NUP_00555	NODE_1	86737	87780	+	Major capsid protein (HK97-like)	head assembly	Foldseek: HK97 fold; BLASTp: 100% E. coli hits
+KNGPFPPJ_00112	AC4NUP_00570	NODE_1	88500	89200	+	Head-tail joining protein	head assembly	—
+KNGPFPPJ_00115	AC4NUP_00585	NODE_1	89201	90150	+	Tape measure protein (TMP)	tail assembly	determines tail length
+KNGPFPPJ_00118	AC4NUP_00600	NODE_1	92000	93100	+	Baseplate assembly protein	tail assembly	—
+KNGPFPPJ_00120	AC4NUP_00610	NODE_1	97500	98747	+	hypothetical protein	boundary	prophage boundary attR proximal
