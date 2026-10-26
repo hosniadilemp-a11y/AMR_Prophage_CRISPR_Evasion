@@ -2,9 +2,14 @@
 # .gitignore — Paper 2 Active Prophage & CRISPR Evasion Analysis Repository
 # =============================================================================
 
-# Large raw data files (deposit to NCBI SRA / Zenodo instead)
+# Large raw sequencing/assembly files (deposit to NCBI SRA / Zenodo instead)
 data/*
 !data/.gitkeep
+!data/*.csv
+!data/*.tsv
+!data/*.gbk
+!data/*.faa
+!data/*.md
 
 # Large MD trajectory files (archive to Zenodo)
 *.dcd
